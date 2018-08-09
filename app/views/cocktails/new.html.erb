@@ -1,0 +1,21 @@
+<div class="container">
+
+  <%= form_for(@cocktail) do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+   <!--  <div class="form-group">
+      <#%= f.label "Ingredient" %>
+      <#%= f.association :ingredients %>
+    </div> -->
+
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+
+  <%= link_to cocktails_path do %>
+    <i class="fas fa-cocktail">back</i>
+  <% end %>
+
+</div>
