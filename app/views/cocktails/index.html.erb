@@ -1,24 +1,3 @@
-<!-- <div class="navbar-wagon">
-
-  <%#= image_tag "cocktail.png", alt: "cocktail", width: 20 %>
-
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <%#= link_to new_cocktail_path do %>
-      <i class="fas fa-plus-square"> Cocktail</i>
-    <#% end %>
-
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <img src="https://kitt.lewagon.com/placeholder/users/naneng" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">New Cocktail</a></li>
-          <li><a href="#">New Ingredient</a></li>
-          <li><a href="#">Cocktail List</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div> -->
 
 <!-------Banner------>
 
@@ -32,20 +11,22 @@
 
 
 <!-------Cards-------->
+  <h2 class="text-center">Cocktail List</h2>
   <div class="container">
     <div class="row">
 
-        <h2 class="text-center">Cocktail List</h2>
         <div class="cards">
           <!-- Code your cards  here -->
           <% @cocktails.each do |cocktail| %>
-          <div class="col-xs-12 col-md-6 col-md-4">
+          <div class="col-xs-12 col-md-4">
+            <%= link_to cocktail_path(cocktail) do %>
             <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cocktail_photo_or_default cocktail %>');">
-            <div class="card-description">
-              <h4><%=  link_to cocktail.name, cocktail_path(cocktail) %></h4>
+              <h2 class="card-description"><%= cocktail.name %></h2>
+            <div>
             </div>
 
           </div>
+          <% end %>
         </div>
         <% end %>
 
@@ -53,27 +34,4 @@
     </div>
   </div>
 </div>
-        <!--   <div class="card-body" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/shanghai.jpg');">
-            <span class="card-category">Shanghai</span>
-            <div class="card-description">
-              <h2>Jad's Home</h2>
-              <p>Charming room in Shanghai</p>
-            </div>
-            <img class="card-user avatar avatar-large" src="images/jad.png" alt="small card avatar">
-            <a class="card-link" href="#"></a>
-          </div> -->
 
-          <!-- <div class="card-footer">
-            <p>Posted on 22/11/19</p>
-            <div class="controls" >
-              <a href="#" class="card-footer-icons">
-                <i class="fas fa-star"></i>
-              </a>
-              <a href="#" class="card-footer-icons">
-                <i class="fas fa-heart"></i>
-              </a>
-              <a href="#" class="card-footer-icons">
-                <i class="fas fa-share"></i>
-              </a>
-            </div>
-          </div> -->
