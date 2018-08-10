@@ -8,8 +8,8 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <!-- Links -->
-    <%= link_to "New Cocktail", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Cocktail List", cocktails_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "New Cocktail", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link cocktail-btn" %>
+    <%= link_to "Cocktail List", cocktails_path, class: "navbar-wagon-item navbar-wagon-link cocktail-btn" %>
 
 
     <!-- Avatar with dropdown menu -->
@@ -18,13 +18,13 @@
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/naneng", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li>
-            <%= link_to "#" do %>
+            <%= link_to "https://github.com/naneng" do %>
               <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
             <% end %>
           </li>
           <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
+            <%= link_to "https://www.linkedin.com/in/katrina-ariola-b7384812/" do %>
+              <i class="fab fa-linkedin"></i>  <%= t(".settings", default: "LinkedIn") %>
             <% end %>
           </li>
         </ul>
@@ -37,8 +37,8 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <<li><%= link_to "New Cocktail", new_cocktail_path %></li>
-          <li><%= link_to "Cocktail List", cocktails_path %></li>
+        <li><%= link_to "New Cocktail", new_cocktail_path %></li>
+        <li><%= link_to "Cocktail List", cocktails_path %></li>
       </ul>
     </div>
   </div>
