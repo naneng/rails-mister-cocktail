@@ -1,21 +1,12 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <img src="images/cocktail.png" alt="logo">
-  </a>
-
+  <%= image_tag "cocktail.png", alt: "cocktail", width: 20 %>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <%= link_to new_cocktail_path do %>
       <i class="fas fa-plus-square"> Cocktail</i>
     <% end %>
-   <!--  <#%= link_to "Team", "/team.html", class: "navbar-wagon-item navbar-wagon-link" %> -->
 
- <!--    <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a> -->
-
-    <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
         <img src="https://kitt.lewagon.com/placeholder/users/naneng" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">

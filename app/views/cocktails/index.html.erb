@@ -1,13 +1,11 @@
-<div class="navbar-wagon">
-  <!-- Logo -->
+<!-- <div class="navbar-wagon">
 
-  <%= image_tag "cocktail.png", alt: "cocktail", width: 20 %>
+  <%#= image_tag "cocktail.png", alt: "cocktail", width: 20 %>
 
-  <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <%= link_to new_cocktail_path do %>
+    <%#= link_to new_cocktail_path do %>
       <i class="fas fa-plus-square"> Cocktail</i>
-    <% end %>
+    <#% end %>
 
     <div class="navbar-wagon-item">
       <div class="dropdown">
@@ -20,24 +18,41 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<!-------Banner------>
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'background.jpg' %>');">
+  <div class="banner-content">
+    <h1>Le Wagon's cocktails</h1>
+    <p>Awesome beverages for developers nightlife</p>
+
+  </div>
 </div>
 
 
+<!-------Cards-------->
+  <div class="container">
+    <div class="row">
 
 
-
-<div class="container">
-      <h2 class="text-center">Cocktail List</h2>
-      <div class="cards">
-        <!-- Code your cards  here -->
-        <div class="card">
+        <h2 class="text-center">Cocktail List</h2>
+        <div class="cards">
+          <!-- Code your cards  here -->
           <% @cocktails.each do |cocktail| %>
-          <div class="card-body">
-            <span class="card-category"><%=  link_to cocktail.name, cocktail_path(cocktail) %></span>
+          <div class="col-xs-12 col-md-6 col-md-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'classicmargarita.jpg' %>');">
+            <div class="card-description">
+              <h4><%=  link_to cocktail.name, cocktail_path(cocktail) %></h4>
+            </div>
+
           </div>
         </div>
         <% end %>
+
       </div>
+    </div>
+  </div>
 </div>
         <!--   <div class="card-body" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/shanghai.jpg');">
             <span class="card-category">Shanghai</span>
