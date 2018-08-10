@@ -4,11 +4,17 @@
     <div class="col-xs-12 col-sm-6 col-md-4 cocktail-card-container ">
       <div class="card-split">
 
-        <div>image here</div>
+        <div>
+            <p><%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill, class: "border-radius: 5px" %></p>
+          <div>
+
+        </div>
         <div>
           <div>
             <h4><%= @cocktail.name %> Ingredients:</h4>
           </div>
+
+
           <div class="">
             <% @cocktail.doses.each do |dose| %>
             <p><%= dose.description %></p>

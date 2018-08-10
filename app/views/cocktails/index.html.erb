@@ -41,7 +41,7 @@
           <!-- Code your cards  here -->
           <% @cocktails.each do |cocktail| %>
           <div class="col-xs-12 col-md-6 col-md-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'classicmargarita.jpg' %>');">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>');">
             <div class="card-description">
               <h4><%=  link_to cocktail.name, cocktail_path(cocktail) %></h4>
             </div>
