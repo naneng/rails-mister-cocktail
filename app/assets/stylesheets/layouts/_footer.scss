@@ -1,11 +1,16 @@
 .footer {
   transition: all 0.3s ease;
-  height: 20px;
-  padding: 0px 30px;
+  // height: 20px;
+  padding: 0px 0px;
   text-align: center;
   font-size: 12px;
   font-style: italic;
   color: rgb(147, 143, 143);
+  position: fixed;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  background: linear-gradient(to right, #4568dc , #b06ab3);
   // display: flex 0 0 ;
   // align-items: center;
   // justify-content: space-around;
