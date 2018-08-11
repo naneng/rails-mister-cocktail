@@ -1,7 +1,38 @@
-.cards {
-  // width: 400px;
-  // height: 200px;
+.cocktail-container {
+  // background-color: #EFEFEF;
+  text-align: center;
+  align-items: center;
+}
 
+.card-split {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+}
+
+.card-split-box {
+  margin-left: 10px;
+
+}
+
+
+.ingredient-card {
+  border: 1px 0px black solid;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.add-dose-border {
+  border-top: 1px black dotted;
+  margin: 10px 0px;
+  padding-top: 10px;
+}
+
+.card-container {
+  margin-bottom: 30px;
 }
 
 .card {
@@ -12,19 +43,11 @@
   color: white;
   position: relative;
   border-radius: 10px;
-  margin-bottom: 10px;
-
+  margin-bottom: 20px;
 }
 
 .card:hover {
   opacity: 0.8;
-}
-
-.card-split {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 10px;
 }
 
 .card-description {
@@ -33,6 +56,8 @@
   color: white;
   left: 10px;
 }
+
+
 
 .card-description h2 {
   font-size: 24px;

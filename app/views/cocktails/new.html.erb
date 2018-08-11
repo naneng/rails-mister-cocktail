@@ -1,23 +1,33 @@
 <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
 
-  <%= simple_form_for(@cocktail) do |f| %>
-    <div class="form-group">
-      <%= f.input :name, class: 'form-control' %>
+
+
+
+        <%= simple_form_for(@cocktail) do |f| %>
+          <div class="form-group">
+            <%= f.input :name, class: 'form-control' %>
+          </div>
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+
+
+         <!--  <div class="form-group">
+            <#%= f.label "Ingredient" %>
+            <#%= f.association :ingredients %>
+          </div> -->
+
+          <%= f.submit class: 'btn btn-primary' %>
+        <% end %>
+
+        <div class="cocktail-container">
+
+        <%= link_to cocktails_path do %>
+               <p> <i class="fas fa-home"></i></p>
+              <% end %>
+        </div>
+
     </div>
-      <%= f.input :photo %>
-      <%= f.input :photo_cache, as: :hidden %>
-
-
-   <!--  <div class="form-group">
-      <#%= f.label "Ingredient" %>
-      <#%= f.association :ingredients %>
-    </div> -->
-
-    <%= f.submit class: 'btn btn-primary' %>
-  <% end %>
-
-  <%= link_to cocktails_path do %>
-    <i class="fas fa-cocktail">back</i>
-  <% end %>
-
+  </div>
 </div>
