@@ -7,12 +7,12 @@
 .card-split {
   display: flex;
   justify-content: center;
+  margin: 10px 0px;
   // align-items: center;
 }
 
 .card-split-box {
   margin-left: 10px;
-
 }
 
 
@@ -57,8 +57,20 @@
   left: 10px;
 }
 
-
-
 .card-description h2 {
   font-size: 24px;
+}
+
+.card p {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  color: white;
+}
+
+h1, h2, h4, p {
+  // font-family: 'Abril Fatface';
+  // font-family: 'Source Serif Pro', serif;
+  // font-family: 'Tenor Sans', sans-serif;
+  color: rgb(113, 15, 170);
 }

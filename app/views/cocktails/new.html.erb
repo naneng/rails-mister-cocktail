@@ -2,7 +2,8 @@
   <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
         <%= simple_form_for(@cocktail) do |f| %>
-          <div class="form-group">
+          <div class="dose-text">
+          <h1>New cocktail</h1>
             <%= f.input :name, class: 'form-control' %>
             <%= f.input :photo %>
             <%= f.input :photo_cache, as: :hidden %>
@@ -12,7 +13,7 @@
 
         <div class="cocktail-container">
         <%= link_to cocktails_path do %>
-               <p> <i class="fas fa-home"></i></p>
+                <i class="fas fa-home"></i>
               <% end %>
         </div>
     </div>
